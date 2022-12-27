@@ -3,6 +3,8 @@
 namespace DiskominfotikBandaAceh\SSOBandaAcehPHP;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Collection;
+use Illuminate\Filesystem\Filesystem;
 
 class SSOBandaAcehPHPServiceProvider extends ServiceProvider
 {
@@ -30,7 +32,7 @@ class SSOBandaAcehPHPServiceProvider extends ServiceProvider
             ], 'views');
 
             $this->publishes([
-                __DIR__.'/../database/migrations/' => database_path('migrations'),
+                __DIR__.'/../database/migrations/add_sso_at_users_table.php.stub' => $this->getMigrationFileName('add_sso_at_users_table.php'),
             ], 'migrations');
 
             // Publishing assets.
@@ -63,5 +65,19 @@ class SSOBandaAcehPHPServiceProvider extends ServiceProvider
         });
 
         $this->app->register(EventServiceProvider::class);
+    }
+
+    protected function getMigrationFileName($migrationFileName): string
+    {
+        $timestamp = date('Y_m_d_His');
+
+        $filesystem = $this->app->make(Filesystem::class);
+
+        return Collection::make($this->app->databasePath().DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR)
+            ->flatMap(function ($path) use ($filesystem, $migrationFileName) {
+                return $filesystem->glob($path.'*_'.$migrationFileName);
+            })
+            ->push($this->app->databasePath()."/migrations/{$timestamp}_{$migrationFileName}")
+            ->first();
     }
 }
