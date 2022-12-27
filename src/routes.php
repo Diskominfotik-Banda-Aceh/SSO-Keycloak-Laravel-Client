@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use DiskominfotikBandaAceh\SSOBandaAcehPHP\Http\Controllers\SSOController;
 use DiskominfotikBandaAceh\SSOBandaAcehPHP\Http\Controllers\LoginController;
 
-Route::group(['middleware' => ['web', 'prefix' => 'sso', 'as' => 'sso.']], function () {
+Route::group(['middleware' => ['web'], 'prefix' => 'sso', 'as' => 'sso.'], function () {
     Route::get('/login', [LoginController::class, 'login'])->name('login');
 
     Route::group(['middleware' => ['guest'], 'prefix'=>'auth'], function () {

@@ -29,7 +29,7 @@ class SSOController
         $user = getUserModel()::where('email', $providerUser->getEmail())->first();
 
         if (!$user)
-            return redirect()->route('login')->withErrors('Anda tidak terdaftar pada aplikasi ini. Silahkan hubungi Admin.');
+            return redirect()->route('sso.login')->withErrors('Anda tidak terdaftar pada aplikasi ini. Silahkan hubungi Admin.');
 
         $this->ssoService->setUser($user);
         $this->ssoService->updateUser($providerUser);
