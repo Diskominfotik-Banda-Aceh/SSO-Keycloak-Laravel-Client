@@ -31,9 +31,11 @@
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12 c2 px-5 pt-5">
                             <div class="row">
-                                <nav class="nav font-weight-500 mb-1 mb-sm-2 mb-lg-5 px-sm-2 px-lg-5"> <a
-                                        class="nav-link" href="#">Masyarakat</a> <a class="nav-link ac"
-                                        href="#">Pegawai</a> <a class="nav-link" href="#">Developer</a> </nav>
+                                <nav class="nav font-weight-500 mb-1 mb-sm-2 mb-lg-5 px-sm-2 px-lg-5"> 
+                                    {{-- <a class="nav-link" href="#">Masyarakat</a>  --}}
+                                    <a class="nav-link ac" href="#">Pegawai</a> 
+                                    {{-- <a class="nav-link" href="#">Developer</a>  --}}
+                                </nav>
                             </div>
                             <form onsubmit="event.preventDefault()" name="myform" onsubmit="" class="px-5 pb-5">
                                 <div class="d-flex"> <img src="https://i.imgur.com/oGcceAH.jpg" height="22px"
@@ -42,9 +44,19 @@
                                         Log in
                                     </h3>
                                 </div>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger border-left-danger text-left" role="alert">
+                                        <ul class="pl-4 my-2">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+
                                 <span class="small">Masuk dengan SSO menjadi lebih mudah untuk digunakan</span>
                                 <button onclick="javascript:window.location='{{ route('sso.redirect') }}';" class="text-white text-weight-bold bt">Login SSO iconkey</button>
-                                <h5 class="ac" id="register">Register</h5>
+                                {{-- <h5 class="ac" id="register">Register</h5> --}}
                             </form>
                         </div>
                     </div>

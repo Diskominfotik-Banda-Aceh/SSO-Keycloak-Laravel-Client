@@ -16,18 +16,6 @@ class SSOController
     }
 
     public function redirect(Request $request){
-//        $request->session()->put('state', $state = Str::random(40));
-//
-//        $query = http_build_query([Model::class
-//            'client_id' => 'sinergi-web',
-//            'redirect_uri' => 'http://sinergi.test/auth/callback',
-//            'response_type' => 'code',
-//            'scope' => 'profile',
-//            'state' => $state,
-//        ]);
-//
-//        return redirect('https://sso.bandaacehkota.go.id/auth/realms/BandaAceh/protocol/openid-connect/auth?'.$query);
-
         return $this->ssoService->redirect();
     }
 
@@ -38,19 +26,17 @@ class SSOController
             return redirect()->route('sso.redirect');
         }
 
-        // $user = getUserModel()::where('email', $providerUser->getEmail())->first();
+        $user = getUserModel()::where('email', $providerUser->getEmail())->first();
 
-        // if (!$user)
-        //     return redirect()->route('login')->withErrors('Anda tidak terdaftar pada aplikasi ini. Silahkan hubungi Admin.');
+        if (!$user)
+            return redirect()->route('login')->withErrors('Anda tidak terdaftar pada aplikasi ini. Silahkan hubungi Admin.');
 
-        // $this->ssoService->setUser($user);
-        // $this->ssoService->updateUser($providerUser);
+        $this->ssoService->setUser($user);
+        $this->ssoService->updateUser($providerUser);
 
-        // Auth::login($user, true);
+        Auth::login($user, true);
 
-        // return redirect()->route('admin.home');
-
-        dd($providerUser);
+        return redirect()->route(redirectAfterLogin());
     }
 
     public function logout(){
