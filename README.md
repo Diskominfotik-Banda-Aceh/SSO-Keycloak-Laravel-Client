@@ -1,5 +1,5 @@
-# Very short description of the package
-
+# SSO Banda Aceh PHP
+Package ini berguna untuk memudahkan development aplikasi yang ingin menggunakan SSO Banda Aceh
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
 [![Total Downloads](https://img.shields.io/packagist/dt/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
 ![GitHub Actions](https://github.com/diskominfotik-banda-aceh/sso-banda-aceh-php/actions/workflows/main.yml/badge.svg)
@@ -51,7 +51,3 @@ If you discover any security related issues, please email diskominfotikbna@gmail
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
