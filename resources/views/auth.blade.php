@@ -43,7 +43,7 @@
                                     </h3>
                                 </div>
                                 <span class="small">Masuk dengan SSO menjadi lebih mudah untuk digunakan</span>
-                                <button class="text-white text-weight-bold bt">Login SSO iconkey</button>
+                                <button onclick="javascript:window.location='{{ route('sso.redirect') }}';" class="text-white text-weight-bold bt">Login SSO iconkey</button>
                                 <h5 class="ac" id="register">Register</h5>
                             </form>
                         </div>
