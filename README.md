@@ -15,7 +15,12 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 ```
 
 ## Usage
-
+- copy service provider di app.php
+- publish 
+- migrate user sso terbaru
+- copy env keycloak
+- setting model di config
+- tutup auth routes di routes karena sudah berubah ke sso login
 ```php
 // Usage description here
 ```
