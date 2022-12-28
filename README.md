@@ -1,3 +1,17 @@
+Table of contents
+=================
+<!--ts-->
+   * [Table of contents](#table-of-contents)
+   * [SSO Banda Aceh PHP](#sso-banda-aceh-php)
+      * [Instalisasi](#instalisasi)
+      * [Penggunaan](#penggunaan)
+      * [Changelog](#changelog)
+      * [Contributing](#contributing)
+      * [Keamanan](#keamanan)
+      * [Credits](#credits)
+      * [License](#license)
+<!--te-->
+
 # SSO Banda Aceh PHP
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
 [![Total Downloads](https://img.shields.io/packagist/dt/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
@@ -5,12 +19,16 @@
 
 Package ini berguna untuk memudahkan development aplikasi yang ingin menggunakan SSO Banda Aceh
 
-## Installation
+## Instalisasi
 
-You can install the package via composer:
+Package bisa dijalankan dengan cara menjalankan command line sebagai berikut :
 
 ```bash
 composer require diskominfotik-banda-aceh/sso-banda-aceh-php
+```
+
+```bash
+composer dumpautoload
 ```
 
 ## Usage
