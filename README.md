@@ -31,7 +31,7 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 composer dumpautoload
 ```
 
-## Usage
+## Penggunaan
 - composer dumpautoload
 - copy service provider di app.php
 - publish 
@@ -43,12 +43,6 @@ composer dumpautoload
 // Usage description here
 ```
 
-### Testing
-
-```bash
-composer test
-```
-
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -57,7 +51,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-### Security
+### Keamanan
 
 If you discover any security related issues, please email diskominfotikbna@gmail.com instead of using the issue tracker.
 
