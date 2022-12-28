@@ -14,6 +14,7 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 ```
 
 ## Usage
+- composer dumpautoload
 - copy service provider di app.php
 - publish 
 - migrate user sso terbaru
