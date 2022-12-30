@@ -2,7 +2,7 @@
 
 namespace DiskominfotikBandaAceh\SSOBandaAcehPHP\Http\Controllers;
 
-use DiskominfotikBandaAceh\SSOBandaAcehPHP\Services\SSOService;
+use DiskominfotikBandaAceh\SSOBandaAcehPHP\SSOBandaAcehPHP;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,7 +10,7 @@ class SSOController
 {
     private $ssoService;
 
-    public function __construct(SSOService $SSOService)
+    public function __construct(SSOBandaAcehPHP $SSOService)
     {
         $this->ssoService = $SSOService;
     }
