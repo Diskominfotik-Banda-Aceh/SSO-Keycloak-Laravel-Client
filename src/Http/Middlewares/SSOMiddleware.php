@@ -22,7 +22,7 @@ class SSOMiddleware
 
         if (!$success){
             auth()->logout();
-            return redirect()->route('login')->withErrors('Sesi Anda telah habis. Silahkan login kembali.');
+            return redirect()->route('sso.login')->withErrors('Sesi Anda telah habis. Silahkan login kembali.');
         }
 
         return $next($request);

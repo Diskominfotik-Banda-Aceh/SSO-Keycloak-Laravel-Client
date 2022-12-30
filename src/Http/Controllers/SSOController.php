@@ -26,10 +26,12 @@ class SSOController
             return redirect()->route('sso.redirect');
         }
 
-        $user = getUserModel()::where('email', $providerUser->getEmail())->first();
+        $isValid = $this->isValid($providerUser);
 
-        if (!$user)
+        if (!$isValid)
             return redirect()->route('sso.login')->withErrors('Anda tidak terdaftar pada aplikasi ini. Silahkan hubungi Admin.');
+
+        $user = $this->getUser($providerUser);
 
         $this->ssoService->setUser($user);
         $this->ssoService->updateUser($providerUser);
@@ -42,5 +44,13 @@ class SSOController
     public function logout(){
         $this->ssoService->logout();
         \auth()->logout();
+    }
+
+    protected function isValid($providerUser){
+        return $this->getUser($providerUser) ? true : false;
+    }
+
+    protected function getUser($providerUser){
+        return getUserModel()::where('email', $providerUser->getEmail())->first();
     }
 }
