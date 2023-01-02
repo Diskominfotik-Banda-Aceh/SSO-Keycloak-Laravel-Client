@@ -17,7 +17,7 @@ Table of contents
 [![Total Downloads](https://img.shields.io/packagist/dt/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
 ![GitHub Actions](https://github.com/diskominfotik-banda-aceh/sso-banda-aceh-php/actions/workflows/main.yml/badge.svg)
 
-This package provide some config for SSO laravel client that using keycloak SSO
+This package provide some config for SSO laravel client that using keycloak for SSO
 
 ## Installation
 
