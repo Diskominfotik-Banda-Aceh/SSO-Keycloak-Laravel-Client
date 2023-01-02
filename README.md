@@ -3,11 +3,11 @@ Table of contents
 <!--ts-->
    * [Table of contents](#table-of-contents)
    * [SSO Banda Aceh PHP](#sso-banda-aceh-php)
-      * [Instalisasi](#instalisasi)
-      * [Penggunaan](#penggunaan)
+      * [Installation](#installation)
+      * [Usage](#usage)
       * [Changelog](#changelog)
       * [Contributing](#contributing)
-      * [Keamanan](#keamanan)
+      * [Security](#security)
       * [Credits](#credits)
       * [License](#license)
 <!--te-->
@@ -19,7 +19,7 @@ Table of contents
 
 Package ini berguna untuk memudahkan development aplikasi yang ingin menggunakan SSO Banda Aceh
 
-## Instalisasi
+## Installation
 
 Package bisa dijalankan dengan cara menjalankan command line sebagai berikut :
 
@@ -31,14 +31,20 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 composer dumpautoload
 ```
 
-## Penggunaan
-- composer dumpautoload
-- copy service provider di app.php
-- publish 
+## Usage
+- Copy service provider in `app.php` file
+```
+
+```
+- Run command line composer dumpautoload
+```bash
+composer dumpautoload
+```
+- Publish the vendor
 - migrate user sso terbaru
-- copy env keycloak
-- setting model di config
-- tutup auth routes di routes karena sudah berubah ke sso login
+- Copy .env keycloak
+- Setting model di config
+- Tutup auth routes di routes karena sudah berubah ke sso login
 ```php
 // Usage description here
 ```
@@ -51,7 +57,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-### Keamanan
+### Security
 
 If you discover any security related issues, please email diskominfotikbna@gmail.com instead of using the issue tracker.
 
