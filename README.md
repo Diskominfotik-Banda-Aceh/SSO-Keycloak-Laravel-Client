@@ -31,7 +31,7 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 - Copy service provider in `app.php` file for laravel < 5.5
 ```
 'providers' => [
-    Diskominfotik::class
+    DiskominfotikBandaAceh\SSOBandaAcehPHP\SSOBandaAcehPHPServiceProvider::class
 ]
 ```
 - Run this command line for make sure the package run properly
@@ -39,6 +39,10 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 composer dumpautoload
 ```
 - Publish the vendor if you want to use the migration or change the SSO view
+```
+//Add --tag for specific publish. Ex : --tag=migrations,views,config
+php artisan vendor:publish --provider="DiskominfotikBandaAceh\SSOBandaAcehPHP\SSOBandaAcehPHPServiceProvider"
+```
 - Migrate SSO User
 ```bash
 php artisan migrate
