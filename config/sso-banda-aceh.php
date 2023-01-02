@@ -6,5 +6,10 @@ return [
         // set model user class
         'users' => User::class
     ],
-    'redirect_after_login' => 'admin.home'
+    'redirect_after_login' => 'admin.home',
+    'auth' => [
+        'employee' => true,
+        'society' => false,
+        'developer' => false
+    ]
 ];
