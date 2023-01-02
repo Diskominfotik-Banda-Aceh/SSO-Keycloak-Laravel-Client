@@ -34,7 +34,7 @@
                             <div class="row">
                                 <nav class="nav font-weight-500 mb-1 mb-sm-2 mb-lg-5 px-sm-2 px-lg-5"> 
                                     {{-- <a class="nav-link" href="#">Masyarakat</a>  --}}
-                                    <a class="nav-link ac" href="#">Pegawai</a> 
+                                    @if(config('sso-banda-aceh.auth.employee'))<a class="nav-link ac" href="#">Pegawai</a> @endif
                                     {{-- <a class="nav-link" href="#">Developer</a>  --}}
                                 </nav>
                             </div>
