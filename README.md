@@ -47,7 +47,7 @@ php artisan vendor:publish --provider="DiskominfotikBandaAceh\SSOBandaAcehPHP\SS
 ```bash
 php artisan migrate
 ```
-- Copy .env keycloak in laravel client
+- Copy `.env` keycloak in laravel client
 ```
 KEYCLOAK_CLIENT_ID=
 KEYCLOAK_CLIENT_SECRET=
