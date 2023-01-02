@@ -66,7 +66,7 @@ KEYCLOAK_PROFILE=
      'users' => User::class
 ]
 ```
-- [Optional] Setting redirect after login in `sso-banda-aceh.php` config file (if not using the default redirect to `admin.home  `)
+- [Optional] Setting redirect after login in `sso-banda-aceh.php` config file (if not using the default redirect to `admin.home`)
 ```
 'redirect_after_login' => 'admin.home'
 ```
