@@ -17,33 +17,37 @@ Table of contents
 [![Total Downloads](https://img.shields.io/packagist/dt/diskominfotik-banda-aceh/sso-banda-aceh-php.svg?style=flat-square)](https://packagist.org/packages/diskominfotik-banda-aceh/sso-banda-aceh-php)
 ![GitHub Actions](https://github.com/diskominfotik-banda-aceh/sso-banda-aceh-php/actions/workflows/main.yml/badge.svg)
 
-Package ini berguna untuk memudahkan development aplikasi yang ingin menggunakan SSO Banda Aceh
+This package provide some config for SSO laravel client that using keycloak SSO
 
 ## Installation
 
-Package bisa dijalankan dengan cara menjalankan command line sebagai berikut :
+Run this command line for installation :
 
 ```bash
 composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 ```
 
-```bash
-composer dumpautoload
-```
-
 ## Usage
-- Copy service provider in `app.php` file
+- Copy service provider in `app.php` file for laravel < 5.5
 ```
-
+'providers' => [
+    Diskominfotik::class
+]
 ```
-- Run command line composer dumpautoload
+- Run this command line for make sure the package run properly
 ```bash
 composer dumpautoload
 ```
-- Publish the vendor
-- migrate user sso terbaru
+- Publish the vendor if you want to use the migration or change the SSO view
+- Migrate SSO User
+```bash
+php artisan migrate
+```
 - Copy .env keycloak
-- Setting model di config
+```
+
+```
+- Setting your model in `sso-banda-aceh.php` config file
 - Tutup auth routes di routes karena sudah berubah ke sso login
 ```php
 // Usage description here
