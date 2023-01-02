@@ -47,14 +47,28 @@ php artisan vendor:publish --provider="DiskominfotikBandaAceh\SSOBandaAcehPHP\SS
 ```bash
 php artisan migrate
 ```
-- Copy .env keycloak
+- Copy .env keycloak in laravel client
 ```
-
+KEYCLOAK_CLIENT_ID=
+KEYCLOAK_CLIENT_SECRET=
+KEYCLOAK_REDIRECT_URI=
+KEYCLOAK_BASE_URL=
+KEYCLOAK_REALM=
+KEYCLOAK_PROFILE=
 ```
-- Setting your User model in `sso-banda-aceh.php` config file (if not using the default in `App\Model\User`)
-- Tutup auth routes di routes karena sudah berubah ke sso login
+- Comment the default auth routes in `web.php` (if the login just using SSO)
 ```php
-// Usage description here
+//Auth::routes;
+```
+- [Optional] Setting your `User` model in `sso-banda-aceh.php` config file (if not using the default in `App\Models\User`)
+```
+'models' => [     
+     'users' => User::class
+]
+```
+- [Optional] Setting redirect after login in `sso-banda-aceh.php` config file (if not using the default redirect to `admin.home  `)
+```
+'redirect_after_login' => 'admin.home'
 ```
 
 ### Changelog
