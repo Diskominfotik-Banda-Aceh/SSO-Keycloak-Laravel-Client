@@ -39,9 +39,13 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 composer dumpautoload
 ```
 - Publish the vendor if you want to use the migration or change the SSO view
-```
-//Add --tag for specific publish. Ex : --tag=migrations,views,config
+```bash
 php artisan vendor:publish --provider="DiskominfotikBandaAceh\SSOBandaAcehPHP\SSOBandaAcehPHPServiceProvider"
+```
+```
+Note :
+//Add --tag for specific publish. Ex : --tag=migrations,views,config
+//Add --force for replace existing config file
 ```
 - Migrate SSO User
 ```bash
