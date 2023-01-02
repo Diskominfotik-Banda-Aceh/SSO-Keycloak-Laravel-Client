@@ -47,7 +47,7 @@ php artisan migrate
 ```
 
 ```
-- Setting your model in `sso-banda-aceh.php` config file
+- Setting your User model in `sso-banda-aceh.php` config file (if not using the default in `App\Model\User`)
 - Tutup auth routes di routes karena sudah berubah ke sso login
 ```php
 // Usage description here
