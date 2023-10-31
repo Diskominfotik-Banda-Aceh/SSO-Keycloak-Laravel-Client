@@ -40,8 +40,8 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php "^2.0.0"
 | ---------------- | ------------- |
 | Laravel Ver.7    | V1.0.0  |
 | Laravel Ver.8    | V1.0.0  |
-| Laravel Ver.9    | V2.0.0 (Soon) |
-| Laravel Ver.10   | V2.0.0 (Soon) |
+| Laravel Ver.9    | V2.0.0  |
+| Laravel Ver.10   | V3.0.0  |
 
 ## Usage
 - Copy service provider in `app.php` file for laravel < 5.5
