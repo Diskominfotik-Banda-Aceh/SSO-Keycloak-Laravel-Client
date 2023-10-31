@@ -39,8 +39,7 @@
                                 </nav>
                             </div>
                             <form onsubmit="event.preventDefault()" name="myform" onsubmit="" class="px-5 pb-5">
-                                <div class="d-flex"> <img src="https://i.imgur.com/oGcceAH.jpg" height="22px"
-                                        width="22px" alt="" class="mr-3 mt-2">
+                                <div class="d-flex"> <i class="fa fa-sign-in mr-3 mt-2" aria-hidden="true"></i>
                                     <h3 class="font-weight-bold">
                                         Log in
                                     </h3>
@@ -56,7 +55,7 @@
                                 @endif
 
                                 <span class="small">Masuk dengan SSO menjadi lebih mudah untuk digunakan</span>
-                                <button onclick="javascript:window.location='{{ route('sso.redirect') }}';" class="text-white text-weight-bold bt">Login SSO iconkey</button>
+                                <button onclick="javascript:window.location='{{ route('sso.redirect') }}';" class="text-white text-weight-bold bt">Login SSO <i class="fa fa-key" aria-hidden="true"></i></button>
                                 {{-- <h5 class="ac" id="register">Register</h5> --}}
                             </form>
                         </div>
