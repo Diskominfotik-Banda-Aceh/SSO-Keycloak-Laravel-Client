@@ -30,7 +30,7 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php
 ```bash
 composer require diskominfotik-banda-aceh/sso-banda-aceh-php:2.0.0
 ```
-Or with Tilde (~) or Caret (^) Version Range
+With Tilde (~) or Caret (^) Version Range
 ```bash
 composer require diskominfotik-banda-aceh/sso-banda-aceh-php "^2.0.0"
 ```
