@@ -25,8 +25,14 @@ Run this command line for installation :
 
 ```bash
 composer require diskominfotik-banda-aceh/sso-banda-aceh-php
-//For specific version : composer require diskominfotik-banda-aceh/sso-banda-aceh-php:2.0.0
-//Or : composer require diskominfotik-banda-aceh/sso-banda-aceh-php "^0.4"
+```
+### Specific Version
+```bash
+composer require diskominfotik-banda-aceh/sso-banda-aceh-php:2.0.0
+```
+Or with Tilde (~) or Caret (^) Version Range
+```bash
+composer require diskominfotik-banda-aceh/sso-banda-aceh-php "^2.0.0"
 ```
 
 ### Version
