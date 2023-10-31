@@ -38,7 +38,6 @@ composer require diskominfotik-banda-aceh/sso-banda-aceh-php "^2.0.0"
 ### Version
 | Laravel Version  | SSO Version |
 | ---------------- | ------------- |
-| Laravel Ver.7    | V1.0.0  |
 | Laravel Ver.8    | V1.0.0  |
 | Laravel Ver.9    | V2.0.0  |
 | Laravel Ver.10   | V3.0.0  |
